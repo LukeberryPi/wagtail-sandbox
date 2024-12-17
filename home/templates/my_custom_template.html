@@ -1,4 +1,14 @@
 {% extends "wagtailadmin/base.html" %} {% block content %}
 <h1>My Custom Admin View</h1>
 <p>This is a custom view in the Wagtail admin interface.</p>
-{% endblock %}
+
+{% if data %}
+<h2>Todo Item</h2>
+<ul>
+    <li><strong>ID:</strong> {{ data.id }}</li>
+    <li><strong>Title:</strong> {{ data.title }}</li>
+    <li><strong>Completed:</strong> {{ data.completed }}</li>
+</ul>
+{% else %}
+<p>No data available.</p>
+{% endif %} {% endblock %}

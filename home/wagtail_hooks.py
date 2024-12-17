@@ -8,6 +8,7 @@ def register_my_custom_menu_item():
     return MenuItem(
         'My Custom View',
         reverse('my_custom_view'),
+        icon_name='folder-inverse',
         classnames='icon icon-site',
         order=10000
     )
